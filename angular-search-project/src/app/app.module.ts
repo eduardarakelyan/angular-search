@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     SearchBarComponent,
     HomeComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

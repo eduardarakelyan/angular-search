@@ -1,6 +1,17 @@
 <main>
     <article class="medication-container">
         <p>This is where the card medications go</p>
-        {{myData | json}}
+        <!-- {{myData.drugGroup.conceptGroup | json}} -->
+        <p>NgFor implementation below</p>
+        <div>
+            <div *ngFor="let item of myData.drugGroup.conceptGroup" >
+                <h1>tty: {{item.tty | json}}</h1>
+                <div *ngFor="let conceptyProperty of item.conceptProperties">
+                    <p>name: {{conceptyProperty.name | json}}</p>
+                    <p>synonym: {{conceptyProperty.synonym | json}}</p>
+                </div>
+            </div>
+        </div>
+        
     </article>
 </main>

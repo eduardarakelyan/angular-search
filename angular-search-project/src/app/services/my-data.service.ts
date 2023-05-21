@@ -9,6 +9,6 @@ export class MyDataService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get('https://rxnav.nlm.nih.gov/REST/drugs.json?name=cymbalta')
+    return this.http.get('https://rxnav.nlm.nih.gov/REST/drugs.json?name=azithromycin')
   }
 }

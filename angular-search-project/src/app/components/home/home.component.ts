@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs';
 import { MyDataService } from 'src/app/services/my-data.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private myDataService: MyDataService) {}
 
   ngOnInit() {
-    this.myDataService.getData().subscribe((res:any) => {
+    this.myDataService.getData().pipe(take(1)).subscribe((res:any) => {
       this.myData = res;
     })
   }
