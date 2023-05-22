@@ -4,11 +4,17 @@
         <!-- {{myData.drugGroup.conceptGroup | json}} -->
         <p>NgFor implementation below</p>
         <div>
-            <div *ngFor="let item of myData.drugGroup.conceptGroup" >
-                <h1>tty: {{item.tty | json}}</h1>
-                <div *ngFor="let conceptyProperty of item.conceptProperties">
-                    <p>name: {{conceptyProperty.name | json}}</p>
-                    <p>synonym: {{conceptyProperty.synonym | json}}</p>
+            <div class="card-container" *ngFor="let item of myData?.results" >
+                <div class="card" *ngFor="let products of item?.products">
+                    <p>product_number : {{products.product_number | json}}</p>
+                    <p>reference_drug : {{products.reference_drug | json}},</p>
+                    <p>brand_name : {{products.brand_name | json}},</p>
+                    <p>active_ingredients name : {{ products.active_ingredients[0].name | json}}</p>
+                    <p>active_ingredients strength : {{ products.active_ingredients[0].strength | json}}</p>
+                    <p>reference_standard : {{products.reference_standard | json}}</p>
+                    <p>dosage_form: {{ products.dosage_form | json}}</p>
+                    <p>route: {{products.route | json}}</p>
+                    <p>marketing_status : {{products.marketing_status | json}}</p>
                 </div>
             </div>
         </div>
