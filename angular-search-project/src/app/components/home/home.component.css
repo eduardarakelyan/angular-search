@@ -1,12 +1,13 @@
 .medication-container {
-    width:80%;
+    width:80vw;
+    height: 100vh;
     margin: 0 auto;
-    background-color: beige;
+    background-color: rgb(241, 241, 241);
 }
 
 .card-container {
-    display: flex;
-    gap: 1rem;
+    /* display: flex;
+    gap: 1rem; */
 }
 
 .card {

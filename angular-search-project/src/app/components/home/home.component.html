@@ -3,12 +3,34 @@
         <p>This is where the card medications go</p>
         <!-- {{myData.drugGroup.conceptGroup | json}} -->
         <p>NgFor implementation below</p>
+        <!-- <button (click)="onSearch()">call search data function</button> -->
+        <h1>data in myData below</h1>
+        {{myData}}
+        <h1>data in myFilteredData below</h1>
+        {{myFilteredData}}
         <div>
             <div class="card-container" *ngFor="let item of myData?.results" >
                 <div class="card" *ngFor="let products of item?.products">
+                    <h1>brand_name : {{products.brand_name | json}},</h1>
                     <p>product_number : {{products.product_number | json}}</p>
                     <p>reference_drug : {{products.reference_drug | json}},</p>
-                    <p>brand_name : {{products.brand_name | json}},</p>
+                    <p>active_ingredients name : {{ products.active_ingredients[0].name | json}}</p>
+                    <p>active_ingredients strength : {{ products.active_ingredients[0].strength | json}}</p>
+                    <p>reference_standard : {{products.reference_standard | json}}</p>
+                    <p>dosage_form: {{ products.dosage_form | json}}</p>
+                    <p>route: {{products.route | json}}</p>
+                    <p>marketing_status : {{products.marketing_status | json}}</p>
+                </div>
+            </div>
+        </div>
+
+        <h1>data in myFilteredData below</h1>
+        <div>
+            <div class="card-container" *ngFor="let item of myFilteredData?.results" >
+                <div class="card" *ngFor="let products of item?.products">
+                    <h1>brand_name : {{products.brand_name | json}},</h1>
+                    <p>product_number : {{products.product_number | json}}</p>
+                    <p>reference_drug : {{products.reference_drug | json}},</p>
                     <p>active_ingredients name : {{ products.active_ingredients[0].name | json}}</p>
                     <p>active_ingredients strength : {{ products.active_ingredients[0].strength | json}}</p>
                     <p>reference_standard : {{products.reference_standard | json}}</p>
