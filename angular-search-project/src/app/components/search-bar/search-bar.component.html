@@ -1,8 +1,12 @@
 <div class="form-container">
-    <form>
+    <!-- <form> -->
         <!-- <label for="fname">Search for medication:</label> -->
         <!-- <input type="text" #box (keyup)="getValue(box.value)" placeholder="Enter name" name="name"> -->
-        <input type="text" [(ngModel)]="inputValue" (ngModelChange)="onChangeSearch()" name="searchName" placeholder="Enter name" name="name">
+        <!-- <input type="text" [(ngModel)]="inputValue" (ngModelChange)="onChangeSearch()" name="searchName" placeholder="Enter name" name="name"> -->
         <!-- <input type="submit" value="Submit"> -->
-    </form>
+    <!-- </form> -->
+    <nav>
+        <input type="text" [(ngModel)]="message" name="searchName" placeholder="Enter name">
+        <button (click)="sendMessage()">Search</button>
+    </nav>
 </div>

@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import { MyDataService } from 'src/app/services/my-data.service';
-import { HomeComponent } from '../home/home.component';
+import { Component,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search-bar',
@@ -8,12 +6,18 @@ import { HomeComponent } from '../home/home.component';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent {
-  public inputValue:string = '';
+  message: string = ''
 
-  constructor(private home : HomeComponent) {}
+  @Output() messageEvent = new EventEmitter<string>();
 
-  onChangeSearch() {
-    console.log("value entered in input: ",this.inputValue)
-    this.home.onSearch(this.inputValue);
+  constructor() {}
+
+  sendMessage(){
+    this.messageEvent.emit(this.message)
   }
+
+  // onChangeSearch() {
+  //   console.log("value entered in input: ",this.inputValue)
+  //   this.home.onSearch(this.inputValue);
+  // }
 }
