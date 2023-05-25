@@ -4,7 +4,7 @@
         <!-- <div class="button-container">
             <button>prev</button>
         </div> -->
-        <div class="card-container" *ngFor="let item of myData?.results" >
+        <div class="card-container" *ngFor="let item of myData?.results">
             <div class="card" *ngFor="let products of item?.products">
                 <div class="card-content">
                     <h1>{{products.brand_name | json}}</h1>
@@ -20,6 +20,11 @@
                 
             </div>
         </div>
+        <div *ngIf="errorMessage">
+            {{errorMessage}} 
+        </div>
+        
+        
         <!-- <div class="button-container">
             <button>next</button>
         </div>  -->
