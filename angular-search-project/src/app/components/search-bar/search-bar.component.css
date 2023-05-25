@@ -1,7 +1,56 @@
 .form-container {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 30%;
     margin: 0 auto;
+}
+
+.inputSearch {
+    width:80%;
+    padding:9px;
+    border-radius: 0px;
+    border: 1px solid black;
+	border-right: 0;
+}
+
+.submitButton {
+    width:20%;
+    padding:9px;
+    border:1px solid black;
+    background-color: #ffa500;
+}
+
+/* responsive phone */
+@media screen and (max-width: 480px) {
+    .form-container {
+      width:80%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .form-container {
+      width:80%;
+    }
+}
+
+/* responsive TABLETS */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .form-container {
+        width:60%;
+    }
+    /* .card-content { 
+      background-color: red;
+    } */
+}
+
+/* responsive LAPTOP */
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    /* .card-content {
+      background-color: blue;
+    } */
+}
+
+/* responsive DESKTOP */
+@media screen and (min-width: 1024px) {
+    /* .card-content {
+      background-color: orange;
+    } */
 }

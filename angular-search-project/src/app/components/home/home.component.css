@@ -2,35 +2,30 @@
     width:100vw;
     height: 100vh; 
     margin: 0 auto;
-    /* background-color: rgb(241, 241, 241); */
-
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: space-around;
 }
-/* 
-.button-container {
-    display: flex;
-    align-items: center;
-} */
+
+.error-container {
+    width:100vw;
+}
+
+.error {
+    color:red;
+    text-align: center;
+}
 
 .card-container {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap:wrap; */
-    /* gap: 1rem; */
     height:400px;
     width:400px;
     margin:10px;
-    /* display: inline-block; */
-    
  }
 
 .card {
     background-color: #ffa500;
     border:1px #ccc solid;
-    /* height:400px; */
     width:400px;
     padding: 20px;
     border-radius: 10px;
@@ -49,4 +44,45 @@
     height:350px;
     background-color: white;
     overflow-y: scroll;
+}
+
+/*  
+    desktop: 1200px
+    laptop: 1024px
+    tablet: 768px
+    phone: 480px
+*/
+
+/* responsive phone */
+@media screen and (max-width: 480px) {
+    .card-content {
+      background-color: lightgreen;
+    }
+    .card-container {
+        height:400px;
+        width:400px;
+        margin:10px;
+     }
+    
+}
+
+/* responsive TABLETS */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .card-content { 
+      background-color: red;
+    }
+}
+
+/* responsive LAPTOP */
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    .card-content {
+      background-color: blue;
+    }
+}
+
+/* responsive DESKTOP */
+@media screen and (min-width: 1024px) {
+    /* .card-content {
+      background-color: orange;
+    } */
 }

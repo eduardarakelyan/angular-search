@@ -14,7 +14,7 @@ export class MyDataService {
   }
 
   handleError(error:any) {
-    return throwError(error.message || "Server Error");
+    return throwError(error.error.error.message || "Server Error");
   }
 
   postData() {

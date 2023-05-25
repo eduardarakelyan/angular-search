@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { take } from 'rxjs';
 import { MyDataService } from 'src/app/services/my-data.service';
 
@@ -25,13 +25,13 @@ export class HomeComponent {
   // }
 
   receiveMessage($event:any) {
-    console.log("message: ",$event)
     this.message = $event
     this.myDataService.getData(this.message).pipe(take(1)).subscribe((res:any) => {
       this.myData = res;
       this.errorMessage = ''
       },(error) => {
         console.log(error)
+        this.myData = null;
         this.errorMessage = error;
       })
   }
