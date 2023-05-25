@@ -13,11 +13,8 @@ export class SearchBarComponent {
   constructor() {}
 
   sendMessage(){
-    this.messageEvent.emit(this.message)
+    // use trim to remove white space
+    this.messageEvent.emit(this.message.trim())
   }
 
-  // onChangeSearch() {
-  //   console.log("value entered in input: ",this.inputValue)
-  //   this.home.onSearch(this.inputValue);
-  // }
 }

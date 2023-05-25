@@ -9,11 +9,11 @@ export class MyDataService {
   constructor(private http: HttpClient) {}
 
   getData(param:string) {
-    if(param) {
-      return this.http.get(`https://api.fda.gov/drug/drugsfda.json?search=products.dosage_form:"${param}"&limit=20`)
-    } else {
-      return this.http.get('https://api.fda.gov/drug/drugsfda.json')
-    }
+    // if(param) {
+      return this.http.get(`https://api.fda.gov/drug/drugsfda.json?search=products.dosage_form:"${param}"&limit=500`)
+    // } else {
+    //   return this.http.get('https://api.fda.gov/drug/drugsfda.json')
+    // }
   }
 
   postData() {
