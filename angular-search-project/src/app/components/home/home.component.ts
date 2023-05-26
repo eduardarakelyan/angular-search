@@ -94,8 +94,6 @@ export class HomeComponent {
   receiveMessage($event:string) {
     this.message = $event
     this.myDataService.getData(this.message).pipe(take(1)).subscribe((res) => {
-      // let filteredArray = res.results.map((v) => v.products.splice(1,1))
-      console.log()
       this.myData = res;
       this.errorMessage = ''
       },(error) => {
