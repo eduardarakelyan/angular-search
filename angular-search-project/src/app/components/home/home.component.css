@@ -1,9 +1,10 @@
 .medication-container {
-    margin-top: 20px;
+    margin: 20px 0;
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: space-around;
+    gap:2rem;
 }
 
 .hidden {
@@ -27,6 +28,7 @@ table, td {
 
 .error-container {
     width:100vw;
+    margin-top: 20px;
 }
 
 .error {
@@ -35,13 +37,11 @@ table, td {
 }
 
 .card-container {
-    height:400px;
     width:400px;
-    margin:10px;
+    /* margin:10px; */
  }
 
 .card {
-    /* background-color: #ffa500; */
     border:1px #ccc solid;
     padding: 20px;
     border-radius: 10px;
@@ -57,7 +57,7 @@ table, td {
     background-color: #ADD8E6;
 }
 .card-content {
-    height:350px;
+    height:300px;
     background-color: white;
     overflow-y: scroll;
 }
