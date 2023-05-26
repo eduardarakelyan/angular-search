@@ -2,7 +2,6 @@
     <app-search-bar (messageEvent)="receiveMessage($event)"></app-search-bar>
     <article class="{{!myData ? 'medication-container-hidden' : 'medication-container'}}">
         <div class="card-container" *ngFor="let item of myData?.results">
-            <!-- {{item.products.length}} -->
             <div class="card" *ngFor="let products of item?.products;let odd = odd;" [ngClass]="{hidden:odd}">
                 <div class="card-content">
                     <h1>{{products.brand_name}}</h1>

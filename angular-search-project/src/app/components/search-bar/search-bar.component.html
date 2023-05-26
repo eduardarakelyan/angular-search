@@ -1,6 +1,9 @@
 <div class="form-container">
     <nav>
-        <input class="inputSearch" type="text" [(ngModel)]="message" name="searchName" placeholder="Enter dosage form">
+        <select class="selectItemsDropdown" (change)="onChangeItem($event)">
+            <option *ngFor="let field of fields">{{field}}</option> 
+        </select>
+        <input class="inputSearch" type="text" [(ngModel)]="message" name="searchName" placeholder="Enter {{selectedItem}}">
         <button class="submitButton" (click)="sendMessage()">Search</button>
     </nav>
 </div>

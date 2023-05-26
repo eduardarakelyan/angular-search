@@ -79,6 +79,11 @@ type myDataType = {
   results:myDataTypeResults[];
 }
 
+type eventType = {
+  message:string;
+  selectedItem:string;
+}
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -87,13 +92,17 @@ type myDataType = {
 export class HomeComponent {
   myData: myDataType | undefined | null
   message:string = ''
+  selectedDropdownItem:string = ''
+  
   errorMessage:string = ''
   constructor(private myDataService: MyDataService) {
   }
 
-  receiveMessage($event:string) {
-    this.message = $event
-    this.myDataService.getData(this.message).pipe(take(1)).subscribe((res) => {
+  receiveMessage($event:eventType) {
+    console.log('inside event: ',$event);
+    this.message = $event.message
+    this.selectedDropdownItem = $event.selectedItem
+    this.myDataService.getData(this.message,this.selectedDropdownItem).pipe(take(1)).subscribe((res) => {
       this.myData = res;
       this.errorMessage = ''
       },(error) => {
@@ -101,8 +110,6 @@ export class HomeComponent {
         this.myData = null;
         this.errorMessage = error;
       })
-  
   }
-
 
 }

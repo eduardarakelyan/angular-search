@@ -50,6 +50,7 @@ table, td {
 
 .card p{
     word-wrap: break-word;
+    margin:10px 0;
 }
 
 .card h1 {
@@ -60,13 +61,6 @@ table, td {
     background-color: white;
     overflow-y: scroll;
 }
-
-/*  
-    desktop: 1200px
-    laptop: 1024px
-    tablet: 768px
-    phone: 480px
-*/
 
 /* responsive phone */
 @media screen and (max-width: 480px) {

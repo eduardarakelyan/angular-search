@@ -3,8 +3,16 @@
     margin: 0 auto;
 }
 
+.selectItemsDropdown {
+    width:30%;
+    padding:8.7px;
+    border-radius: 0px;
+    border: 1px solid black;
+    border-right: 0;
+}
+
 .inputSearch {
-    width:80%;
+    width:50%;
     padding:9px;
     border-radius: 0px;
     border: 1px solid black;
@@ -21,30 +29,33 @@
 /* responsive phone */
 @media screen and (max-width: 480px) {
     .form-container {
-      width:80%;
+      width:90%;
+    }
+    .selectItemsDropdown option {
+        font-size: 10px;
+        /* min-height: 1px; */
     }
 }
-
 
 /* responsive TABLETS */
 @media screen and (min-width: 480px) and (max-width: 768px) {
     .form-container {
-      width:70%;
+      width:80%;
     }
 }
 
 /* responsive LAPTOPS */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .form-container {
-        width:40%;
+        width:50%;
     }
 }
 
 /* responsive DESKTOP */
 @media screen and (min-width: 1024px) and (max-width:1200px) {
-    /* .form-container {
-        width:30%;
-    } */
+    .form-container {
+        width:50%;
+    }
 }
 
 /* responsive LARGER SCREENS */
