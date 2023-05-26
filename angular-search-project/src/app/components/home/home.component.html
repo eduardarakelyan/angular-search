@@ -1,32 +1,42 @@
 <main>
     <app-search-bar (messageEvent)="receiveMessage($event)"></app-search-bar>
-    <article class="medication-container">
-        <!-- <div class="button-container">
-            <button>prev</button>
-        </div> -->
+    <article class="{{!myData ? 'medication-container-hidden' : 'medication-container'}}">
         <div class="card-container" *ngFor="let item of myData?.results">
             <div class="card" *ngFor="let products of item?.products">
                 <div class="card-content">
-                    <h1>{{products.brand_name | json}}</h1>
-                    <p>product_number : {{products.product_number | json}}</p>
-                    <p>reference_drug : {{products.reference_drug | json}},</p>
-                    <p>active_ingredients name : {{ products.active_ingredients[0].name | json}}</p>
-                    <p>active_ingredients strength : {{ products.active_ingredients[0].strength | json}}</p>
-                    <p>reference_standard : {{products.reference_standard | json}}</p>
-                    <p>dosage_form: {{ products.dosage_form | json}}</p>
-                    <p>route: {{products.route | json}}</p>
-                    <p>marketing_status : {{products.marketing_status | json}}</p>
+                    <h1>{{products.brand_name}}</h1>
+                    <p><em>{{item.sponsor_name}}</em></p>
+                    <table>
+                        <tr>
+                            <th>Active Ingredients</th>
+                            <th>Active Ingredients Strength</th>
+                        </tr>
+                        <tr>
+                            <td>{{products.active_ingredients[0].name}}</td>
+                            <td>{{products.active_ingredients[0].strength}}</td>
+                        </tr>
+                        <tr>
+                            <th>Reference Standard</th>
+                            <th>Dosage Form</th>
+                        </tr>
+                        <tr>
+                            <td>{{products.reference_standard}}</td>
+                            <td><mark>{{ products.dosage_form}}</mark></td>
+                        </tr>
+                        <tr>
+                            <th>Route of Administration</th>
+                            <th>Marketing Status</th>
+                        </tr>
+                        <tr>
+                            <td>{{products.route}}</td>
+                            <td>{{products.marketing_status}}</td>
+                        </tr>
+                    </table>
                 </div>
-                
             </div>
         </div>
         <div class="error-container" *ngIf="errorMessage">
             <p class="error">{{errorMessage}} </p>
         </div>
-        
-        
-        <!-- <div class="button-container">
-            <button>next</button>
-        </div>  -->
     </article>
 </main>

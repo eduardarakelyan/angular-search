@@ -13,7 +13,6 @@ export class SearchBarComponent {
   constructor() {}
 
   sendMessage(){
-    // use trim to remove white space
     this.messageEvent.emit(this.message.trim())
   }
 

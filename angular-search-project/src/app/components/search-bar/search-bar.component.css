@@ -31,26 +31,16 @@
     }
 }
 
-/* responsive TABLETS */
+/* responsive TABLETS / LAPTOPS */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .form-container {
         width:60%;
     }
-    /* .card-content { 
-      background-color: red;
-    } */
-}
-
-/* responsive LAPTOP */
-@media screen and (min-width: 768px) and (max-width:1024px) {
-    /* .card-content {
-      background-color: blue;
-    } */
 }
 
 /* responsive DESKTOP */
 @media screen and (min-width: 1024px) {
-    /* .card-content {
-      background-color: orange;
-    } */
+    .form-container {
+        width:30%;
+    }
 }

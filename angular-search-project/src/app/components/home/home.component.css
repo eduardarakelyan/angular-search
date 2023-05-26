@@ -1,11 +1,26 @@
 .medication-container {
-    width:100vw;
-    height: 100vh; 
-    margin: 0 auto;
+    /* width:100vw;
+    height: 100vh;  */
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: space-around;
+}
+
+.medication-container-hidden {
+    display: hidden;
+}
+
+table {
+    margin:0;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+table, td {
+    text-align: center;
 }
 
 .error-container {
@@ -26,7 +41,6 @@
 .card {
     background-color: #ffa500;
     border:1px #ccc solid;
-    width:400px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -40,7 +54,6 @@
     background-color: #ADD8E6;
 }
 .card-content {
-    width:100%;
     height:350px;
     background-color: white;
     overflow-y: scroll;
@@ -56,31 +69,22 @@
 /* responsive phone */
 @media screen and (max-width: 480px) {
     .card-content {
-      background-color: lightgreen;
+      /* background-color: lightgreen; */
     }
-    .card-container {
-        height:400px;
-        width:400px;
-        margin:10px;
-     }
-    
+    .medication-container {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 }
 
-/* responsive TABLETS */
+/* responsive TABLETS / LAPTOPS */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .card-content { 
-      background-color: red;
+      /* background-color: red; */
     }
 }
 
-/* responsive LAPTOP */
-@media screen and (min-width: 768px) and (max-width:1024px) {
-    .card-content {
-      background-color: blue;
-    }
-}
-
-/* responsive DESKTOP */
+/* responsive DESKTOP / LARGER SCREENS */
 @media screen and (min-width: 1024px) {
     /* .card-content {
       background-color: orange;
