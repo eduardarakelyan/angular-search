@@ -1,11 +1,13 @@
 .medication-container {
-    /* width:100vw;
-    height: 100vh;  */
     margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: space-around;
+}
+
+.hidden {
+    display: none;
 }
 
 .medication-container-hidden {
@@ -39,7 +41,7 @@ table, td {
  }
 
 .card {
-    background-color: #ffa500;
+    /* background-color: #ffa500; */
     border:1px #ccc solid;
     padding: 20px;
     border-radius: 10px;
@@ -68,25 +70,28 @@ table, td {
 
 /* responsive phone */
 @media screen and (max-width: 480px) {
-    .card-content {
-      /* background-color: lightgreen; */
-    }
     .medication-container {
         margin-right: 10px;
         margin-left: 10px;
     }
 }
 
-/* responsive TABLETS / LAPTOPS */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .card-content { 
-      /* background-color: red; */
-    }
+/* responsive TABLETS */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    
 }
 
-/* responsive DESKTOP / LARGER SCREENS */
-@media screen and (min-width: 1024px) {
-    /* .card-content {
-      background-color: orange;
-    } */
+/* responsive LAPTOPS */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+}
+
+/* responsive DESKTOP */
+@media screen and (min-width: 1024px) and (max-width:1200px) {
+    
+}
+
+/* responsive LARGER SCREENS */
+@media screen and (min-width:1200px) {
+    
 }

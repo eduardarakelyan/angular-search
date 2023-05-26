@@ -85,9 +85,7 @@ type myDataType = {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  //make sure to remove "any" type. Put actual type
   myData: myDataType | undefined | null
-  // myFilteredData:any
   message:string = ''
   errorMessage:string = ''
   constructor(private myDataService: MyDataService) {
@@ -96,7 +94,8 @@ export class HomeComponent {
   receiveMessage($event:string) {
     this.message = $event
     this.myDataService.getData(this.message).pipe(take(1)).subscribe((res) => {
-      console.log("in res: ",res)
+      // let filteredArray = res.results.map((v) => v.products.splice(1,1))
+      console.log()
       this.myData = res;
       this.errorMessage = ''
       },(error) => {
@@ -104,6 +103,7 @@ export class HomeComponent {
         this.myData = null;
         this.errorMessage = error;
       })
+  
   }
 
 
