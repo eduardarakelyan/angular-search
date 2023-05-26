@@ -91,6 +91,7 @@ type eventType = {
 })
 export class HomeComponent {
   myData: myDataType | undefined | null
+
   message:string = ''
   selectedDropdownItem:string = ''
   
@@ -99,14 +100,12 @@ export class HomeComponent {
   }
 
   receiveMessage($event:eventType) {
-    console.log('inside event: ',$event);
     this.message = $event.message
     this.selectedDropdownItem = $event.selectedItem
     this.myDataService.getData(this.message,this.selectedDropdownItem).pipe(take(1)).subscribe((res) => {
       this.myData = res;
       this.errorMessage = ''
       },(error) => {
-        console.log(error)
         this.myData = null;
         this.errorMessage = error;
       })
