@@ -6,32 +6,34 @@
                 <div class="card-content">
                     <h1>{{products.brand_name}}</h1>
                     <p><em>{{item.sponsor_name}}</em></p>
-                    <table>
-                        <tr>
-                            <th>Active Ingredients</th>
-                            <th>Active Ingredients Strength</th>
-                        </tr>
-                        <tr>
-                            <td>{{products.active_ingredients[0].name}}</td>
-                            <td>{{products.active_ingredients[0].strength}}</td>
-                        </tr>
-                        <tr>
-                            <th>Reference Standard</th>
-                            <th>Dosage Form</th>
-                        </tr>
-                        <tr>
-                            <td>{{products.reference_standard}}</td>
-                            <td><mark>{{ products.dosage_form}}</mark></td>
-                        </tr>
-                        <tr>
-                            <th>Route of Administration</th>
-                            <th>Marketing Status</th>
-                        </tr>
-                        <tr>
-                            <td>{{products.route}}</td>
-                            <td>{{products.marketing_status}}</td>
-                        </tr>
-                    </table>
+                    <div class="tableContainer">
+                        <table>
+                            <tr>
+                                <th>Active Ingredients</th>
+                                <th>Active Ingredients Strength</th>
+                            </tr>
+                            <tr>
+                                <td>{{products.active_ingredients[0].name}}</td>
+                                <td>{{products.active_ingredients[0].strength}}</td>
+                            </tr>
+                            <tr>
+                                <th>Reference Standard</th>
+                                <th>Dosage Form</th>
+                            </tr>
+                            <tr>
+                                <td>{{products.reference_standard}}</td>
+                                <td><mark>{{ products.dosage_form}}</mark></td>
+                            </tr>
+                            <tr>
+                                <th>Route of Administration</th>
+                                <th>Marketing Status</th>
+                            </tr>
+                            <tr>
+                                <td>{{products.route}}</td>
+                                <td>{{products.marketing_status}}</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

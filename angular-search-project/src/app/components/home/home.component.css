@@ -17,6 +17,12 @@
 
 table {
     margin:0;
+    width: 100%;
+}
+
+.tableContainer {
+    height:175px;
+    overflow-y: scroll;
 }
 
 table, th, td {
@@ -59,7 +65,7 @@ table, td {
 .card-content {
     height:300px;
     background-color: white;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 /* responsive PHONE */
