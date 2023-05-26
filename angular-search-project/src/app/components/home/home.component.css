@@ -38,7 +38,6 @@ table, td {
 
 .card-container {
     width:400px;
-    /* margin:10px; */
  }
 
 .card {
@@ -62,7 +61,7 @@ table, td {
     overflow-y: scroll;
 }
 
-/* responsive phone */
+/* responsive PHONE */
 @media screen and (max-width: 480px) {
     .medication-container {
         margin-right: 10px;

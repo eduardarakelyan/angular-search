@@ -26,7 +26,7 @@
     background-color: #ADD8E6;
 }
 
-/* responsive phone */
+/* responsive PHONE */
 @media screen and (max-width: 480px) {
     .form-container {
       width:90%;

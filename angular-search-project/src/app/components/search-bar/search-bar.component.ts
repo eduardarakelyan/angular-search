@@ -14,7 +14,7 @@ type eventType = {
 export class SearchBarComponent {
   message: string = ''
   selectedItem:string = ''
-  fields = ['dosage form', 'brand name']  
+  fields:string[] = ['dosage form', 'brand name']  
 
   @Output() messageEvent = new EventEmitter<eventType>();
 
@@ -29,7 +29,7 @@ export class SearchBarComponent {
   }
 
   onChangeItem(e:any){
-    this.selectedItem = e.target.value
+    this.selectedItem = e.target.value;
   }
 
 }
